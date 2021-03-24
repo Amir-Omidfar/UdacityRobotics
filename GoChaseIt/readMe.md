@@ -22,7 +22,7 @@ To launch the packages, first the world.launch file should be launch which launc
 The ball_chaser ROS package holds two C++ nodes. A drive_bot C++ node that provides a ball_chaser/command_robot service to drive the robot by controlling its linear x and angular z velocities. The service publishes to the wheel joints and returns back the requested velocities. The process_image C++ node reads the robot’s camera image and analyzes it to determine the presence and position of a white ball. If a white ball exists in the image, the node request a service via a client to drive the robot towards it. The ball_chaser.launch should run both the drive_bot and the process_image nodes. The designed robot in this project will be used as a base model for all upcoming projects in this Robotics Software Engineer Nanodegree Program.
 
 ## File Structure
-
+```
 .Project2                          # Go Chase It Project
     ├── my_robot                       # my_robot package
     │   ├── launch                     # launch folder for launch files
@@ -48,6 +48,7 @@ The ball_chaser ROS package holds two C++ nodes. A drive_bot C++ node that provi
     │   ├── CMakeLists.txt             # compiler instructions
     │   ├── package.xml                # package info
     └──
+```
 ## Plugins
 
 In the Udacity lesson a differential drive robot with two wheels was created. To steer the robot I used the skid steering drive plugin.
